@@ -1,0 +1,1322 @@
+{
+  "variant": "fdl",
+  "seed": 42,
+  "metrics": {
+    "accuracy": 0.9963277973891824,
+    "precision": 0.9951715119203299,
+    "recall": 0.9893,
+    "f1": 0.9922270698560754,
+    "far": 0.0014902666956440745,
+    "frr": 0.0107,
+    "roc_auc": 0.999198397963302,
+    "pr_auc": 0.9980094568971054,
+    "pr_auc_attack": 0.9997341815352734,
+    "tp": 9893,
+    "tn": 32161,
+    "fp": 48,
+    "fn": 107,
+    "threshold": 0.19381299155950563
+  },
+  "per_attack_type": {
+    "backdoor": {
+      "n": 4053,
+      "accepted_rate": 0.0
+    },
+    "ddos": {
+      "n": 4004,
+      "accepted_rate": 0.0027472527472527475
+    },
+    "dos": {
+      "n": 4117,
+      "accepted_rate": 0.002428953121204761
+    },
+    "injection": {
+      "n": 3900,
+      "accepted_rate": 0.0015384615384615385
+    },
+    "mitm": {
+      "n": 209,
+      "accepted_rate": 0.03827751196172249
+    },
+    "normal": {
+      "n": 10000,
+      "accepted_rate": 0.9893
+    },
+    "password": {
+      "n": 3980,
+      "accepted_rate": 0.0007537688442211055
+    },
+    "ransomware": {
+      "n": 3903,
+      "accepted_rate": 0.0007686395080707148
+    },
+    "scanning": {
+      "n": 4041,
+      "accepted_rate": 0.00024746349913387774
+    },
+    "xss": {
+      "n": 4002,
+      "accepted_rate": 0.0014992503748125937
+    }
+  },
+  "af_mfa_policy": {
+    "decisions": {
+      "low": {
+        "risk": 0.15,
+        "required_assurance": 0.35,
+        "factors": [
+          "device_possession"
+        ],
+        "achieved_assurance": 0.4,
+        "estimated_latency_ms": 110,
+        "objective": 0.14
+      },
+      "medium": {
+        "risk": 0.5,
+        "required_assurance": 0.6,
+        "factors": [
+          "fingerprint"
+        ],
+        "achieved_assurance": 0.65,
+        "estimated_latency_ms": 280,
+        "objective": 0.316
+      },
+      "high": {
+        "risk": 0.75,
+        "required_assurance": 0.8,
+        "factors": [
+          "device_possession",
+          "fingerprint"
+        ],
+        "achieved_assurance": 0.79,
+        "estimated_latency_ms": 390,
+        "objective": 0.4610000000000001
+      },
+      "critical": {
+        "risk": 0.95,
+        "required_assurance": 0.93,
+        "factors": [
+          "password",
+          "device_possession",
+          "fingerprint",
+          "keystroke"
+        ],
+        "achieved_assurance": 0.897625,
+        "estimated_latency_ms": 590,
+        "objective": 0.8184070312500002
+      }
+    },
+    "legitimate": {
+      "n": 10000,
+      "band_share": {
+        "low": 0.903,
+        "medium": 0.0093,
+        "high": 0.0778,
+        "critical": 0.0099
+      },
+      "mean_factors": 1.1075,
+      "mean_assurance": 0.4375934875,
+      "mean_factor_latency_ms": 138.117,
+      "step_up_rate": 0.097
+    },
+    "malicious": {
+      "n": 32209,
+      "band_share": {
+        "low": 0.00018628333695550932,
+        "medium": 0.00037256667391101863,
+        "high": 0.01952870315750256,
+        "critical": 0.9799124468316309
+      },
+      "mean_factors": 3.9592660436523954,
+      "mean_assurance": 0.895338267254494,
+      "mean_factor_latency_ms": 585.8893476978484,
+      "step_up_rate": 0.9998137166630445
+    },
+    "fixed_password_otp": {
+      "factors": [
+        "password",
+        "otp"
+      ],
+      "assurance": 0.5874999999999999,
+      "latency_ms": 730
+    }
+  },
+  "latency_ms": {
+    "t_fdl": 0.4445710039781261,
+    "t_hce": 0.0005168300049263053,
+    "t_afmfa": 8.785671859972354,
+    "t_hash": 0.0,
+    "t_lraft": 0.0,
+    "t_store": 0.0,
+    "p95_total_ms": 14.223115600316305
+  },
+  "train_seconds": 1568.5183889559999,
+  "communication": {
+    "upload_bytes": 200196000,
+    "download_bytes": 200196000,
+    "prototype_upload_bytes": 0,
+    "model_params": 100098,
+    "hce_params": 0
+  },
+  "history": [
+    {
+      "round": 0,
+      "participants": [
+        3,
+        2,
+        5,
+        6,
+        9,
+        4,
+        0,
+        1
+      ],
+      "scheduled": 10,
+      "train_loss": 0.06926668575033545,
+      "upload_bytes": 4003920,
+      "download_bytes": 4003920,
+      "prototype_upload_bytes": 0,
+      "cum_bytes": 8007840,
+      "val_roc_auc": 0.9628120076066287,
+      "val_acc_05": 0.8587378209494477
+    },
+    {
+      "round": 1,
+      "participants": [
+        8,
+        1,
+        5,
+        6,
+        9,
+        7,
+        3,
+        2,
+        4,
+        0
+      ],
+      "scheduled": 10,
+      "train_loss": 0.059538813214749096,
+      "upload_bytes": 4003920,
+      "download_bytes": 4003920,
+      "prototype_upload_bytes": 0,
+      "cum_bytes": 16015680,
+      "val_roc_auc": 0.9767532696860325,
+      "val_acc_05": 0.8584120591109663
+    },
+    {
+      "round": 2,
+      "participants": [
+        4,
+        5,
+        0,
+        2,
+        9,
+        3,
+        7,
+        1,
+        8,
+        6
+      ],
+      "scheduled": 10,
+      "train_loss": 0.05469875456765294,
+      "upload_bytes": 4003920,
+      "download_bytes": 4003920,
+      "prototype_upload_bytes": 0,
+      "cum_bytes": 24023520,
+      "val_roc_auc": 0.9823405979547485,
+      "val_acc_05": 0.8592708857760536
+    },
+    {
+      "round": 3,
+      "participants": [
+        5,
+        9,
+        2,
+        7,
+        6,
+        4
+      ],
+      "scheduled": 10,
+      "train_loss": 0.05296056531369686,
+      "upload_bytes": 4003920,
+      "download_bytes": 4003920,
+      "prototype_upload_bytes": 0,
+      "cum_bytes": 32031360,
+      "val_roc_auc": 0.9891611048045951,
+      "val_acc_05": 0.8752036011490508
+    },
+    {
+      "round": 4,
+      "participants": [
+        3,
+        7,
+        2,
+        5,
+        9,
+        8,
+        4,
+        0,
+        6,
+        1
+      ],
+      "scheduled": 10,
+      "train_loss": 0.04454087922349572,
+      "upload_bytes": 4003920,
+      "download_bytes": 4003920,
+      "prototype_upload_bytes": 0,
+      "cum_bytes": 40039200,
+      "val_roc_auc": 0.9903994911126635,
+      "val_acc_05": 0.9054698374152279
+    },
+    {
+      "round": 5,
+      "participants": [
+        0,
+        9,
+        8,
+        2,
+        7,
+        3,
+        4,
+        6,
+        1,
+        5
+      ],
+      "scheduled": 10,
+      "train_loss": 0.04075716007500887,
+      "upload_bytes": 4003920,
+      "download_bytes": 4003920,
+      "prototype_upload_bytes": 0,
+      "cum_bytes": 48047040,
+      "val_roc_auc": 0.9930496031746032,
+      "val_acc_05": 0.9084905380993278
+    },
+    {
+      "round": 6,
+      "participants": [
+        1,
+        0,
+        3,
+        7,
+        6,
+        9,
+        4,
+        2,
+        5,
+        8
+      ],
+      "scheduled": 10,
+      "train_loss": 0.03808591309934854,
+      "upload_bytes": 4003920,
+      "download_bytes": 4003920,
+      "prototype_upload_bytes": 0,
+      "cum_bytes": 56054880,
+      "val_roc_auc": 0.994081099371289,
+      "val_acc_05": 0.9553410134154648
+    },
+    {
+      "round": 7,
+      "participants": [
+        9,
+        3,
+        8,
+        7,
+        4,
+        2,
+        0,
+        6,
+        5,
+        1
+      ],
+      "scheduled": 10,
+      "train_loss": 0.03775390619412065,
+      "upload_bytes": 4003920,
+      "download_bytes": 4003920,
+      "prototype_upload_bytes": 0,
+      "cum_bytes": 64062720,
+      "val_roc_auc": 0.9947758712694532,
+      "val_acc_05": 0.9557556193917138
+    },
+    {
+      "round": 8,
+      "participants": [
+        8,
+        6,
+        0,
+        2,
+        3,
+        1,
+        9,
+        5,
+        4,
+        7
+      ],
+      "scheduled": 10,
+      "train_loss": 0.035558595508337024,
+      "upload_bytes": 4003920,
+      "download_bytes": 4003920,
+      "prototype_upload_bytes": 0,
+      "cum_bytes": 72070560,
+      "val_roc_auc": 0.9953786456514145,
+      "val_acc_05": 0.9567329049071579
+    },
+    {
+      "round": 9,
+      "participants": [
+        0,
+        7,
+        4,
+        1,
+        8,
+        3
+      ],
+      "scheduled": 10,
+      "train_loss": 0.038690449204295874,
+      "upload_bytes": 4003920,
+      "download_bytes": 4003920,
+      "prototype_upload_bytes": 0,
+      "cum_bytes": 80078400,
+      "val_roc_auc": 0.9957191514340047,
+      "val_acc_05": 0.9619747090354488
+    },
+    {
+      "round": 10,
+      "participants": [
+        1,
+        5,
+        9,
+        8,
+        3,
+        2,
+        6,
+        0
+      ],
+      "scheduled": 10,
+      "train_loss": 0.030355916009284556,
+      "upload_bytes": 4003920,
+      "download_bytes": 4003920,
+      "prototype_upload_bytes": 0,
+      "cum_bytes": 88086240,
+      "val_roc_auc": 0.9982199373229325,
+      "val_acc_05": 0.9750940267124708
+    },
+    {
+      "round": 11,
+      "participants": [
+        1,
+        6,
+        8,
+        5,
+        4,
+        7
+      ],
+      "scheduled": 10,
+      "train_loss": 0.03519327317674955,
+      "upload_bytes": 4003920,
+      "download_bytes": 4003920,
+      "prototype_upload_bytes": 0,
+      "cum_bytes": 96094080,
+      "val_roc_auc": 0.9971325629681376,
+      "val_acc_05": 0.9583913288121538
+    },
+    {
+      "round": 12,
+      "participants": [
+        0,
+        9,
+        8,
+        1,
+        5,
+        6,
+        3,
+        4,
+        7,
+        2
+      ],
+      "scheduled": 10,
+      "train_loss": 0.03284439272247255,
+      "upload_bytes": 4003920,
+      "download_bytes": 4003920,
+      "prototype_upload_bytes": 0,
+      "cum_bytes": 104101920,
+      "val_roc_auc": 0.9984009076531999,
+      "val_acc_05": 0.9751828708502384
+    },
+    {
+      "round": 13,
+      "participants": [
+        6,
+        4,
+        8,
+        0,
+        7,
+        2,
+        1
+      ],
+      "scheduled": 10,
+      "train_loss": 0.03527883320514645,
+      "upload_bytes": 4003920,
+      "download_bytes": 4003920,
+      "prototype_upload_bytes": 0,
+      "cum_bytes": 112109760,
+      "val_roc_auc": 0.9984982026429154,
+      "val_acc_05": 0.9757159356768442
+    },
+    {
+      "round": 14,
+      "participants": [
+        6,
+        4,
+        5,
+        7,
+        0,
+        8
+      ],
+      "scheduled": 10,
+      "train_loss": 0.030841218928496044,
+      "upload_bytes": 4003920,
+      "download_bytes": 4003920,
+      "prototype_upload_bytes": 0,
+      "cum_bytes": 120117600,
+      "val_roc_auc": 0.9984920271083169,
+      "val_acc_05": 0.975686320964255
+    },
+    {
+      "round": 15,
+      "participants": [
+        7,
+        8,
+        6,
+        3,
+        2,
+        4,
+        1,
+        9,
+        5,
+        0
+      ],
+      "scheduled": 10,
+      "train_loss": 0.03146310420706868,
+      "upload_bytes": 4003920,
+      "download_bytes": 4003920,
+      "prototype_upload_bytes": 0,
+      "cum_bytes": 128125440,
+      "val_roc_auc": 0.998504555245081,
+      "val_acc_05": 0.9757159356768442
+    },
+    {
+      "round": 16,
+      "participants": [
+        2,
+        4,
+        7,
+        0,
+        1,
+        6,
+        5,
+        8,
+        3,
+        9
+      ],
+      "scheduled": 10,
+      "train_loss": 0.031239052722230553,
+      "upload_bytes": 4003920,
+      "download_bytes": 4003920,
+      "prototype_upload_bytes": 0,
+      "cum_bytes": 136133280,
+      "val_roc_auc": 0.998532252978616,
+      "val_acc_05": 0.9758047798146119
+    },
+    {
+      "round": 17,
+      "participants": [
+        5,
+        9,
+        4,
+        6,
+        2,
+        8,
+        0,
+        7,
+        1,
+        3
+      ],
+      "scheduled": 10,
+      "train_loss": 0.030134451249614357,
+      "upload_bytes": 4003920,
+      "download_bytes": 4003920,
+      "prototype_upload_bytes": 0,
+      "cum_bytes": 144141120,
+      "val_roc_auc": 0.9985548011992083,
+      "val_acc_05": 0.9753605591257737
+    },
+    {
+      "round": 18,
+      "participants": [
+        0,
+        5,
+        8,
+        3,
+        7,
+        2,
+        9,
+        4
+      ],
+      "scheduled": 10,
+      "train_loss": 0.030334015958942473,
+      "upload_bytes": 4003920,
+      "download_bytes": 4003920,
+      "prototype_upload_bytes": 0,
+      "cum_bytes": 152148960,
+      "val_roc_auc": 0.9987267168277254,
+      "val_acc_05": 0.9764266887789854
+    },
+    {
+      "round": 19,
+      "participants": [
+        1,
+        0,
+        9,
+        4,
+        5,
+        8,
+        6,
+        3,
+        2,
+        7
+      ],
+      "scheduled": 10,
+      "train_loss": 0.029793307511135937,
+      "upload_bytes": 4003920,
+      "download_bytes": 4003920,
+      "prototype_upload_bytes": 0,
+      "cum_bytes": 160156800,
+      "val_roc_auc": 0.9987199664299297,
+      "val_acc_05": 0.9760120828027364
+    },
+    {
+      "round": 20,
+      "participants": [
+        5,
+        4,
+        6,
+        1,
+        2,
+        9
+      ],
+      "scheduled": 10,
+      "train_loss": 0.0303715281188488,
+      "upload_bytes": 4003920,
+      "download_bytes": 4003920,
+      "prototype_upload_bytes": 0,
+      "cum_bytes": 168164640,
+      "val_roc_auc": 0.9987885570691194,
+      "val_acc_05": 0.9760713122279149
+    },
+    {
+      "round": 21,
+      "participants": [
+        1,
+        8,
+        6,
+        5,
+        0,
+        3,
+        2,
+        4,
+        9,
+        7
+      ],
+      "scheduled": 10,
+      "train_loss": 0.02887133611366153,
+      "upload_bytes": 4003920,
+      "download_bytes": 4003920,
+      "prototype_upload_bytes": 0,
+      "cum_bytes": 176172480,
+      "val_roc_auc": 0.9988149280086933,
+      "val_acc_05": 0.9758640092397903
+    },
+    {
+      "round": 22,
+      "participants": [
+        3,
+        8,
+        0,
+        5,
+        4,
+        6
+      ],
+      "scheduled": 10,
+      "train_loss": 0.02167522325180471,
+      "upload_bytes": 4003920,
+      "download_bytes": 4003920,
+      "prototype_upload_bytes": 0,
+      "cum_bytes": 184180320,
+      "val_roc_auc": 0.9988394409516048,
+      "val_acc_05": 0.9749755678621139
+    },
+    {
+      "round": 23,
+      "participants": [
+        0,
+        5,
+        2,
+        9,
+        3,
+        1,
+        7,
+        8,
+        4,
+        6
+      ],
+      "scheduled": 10,
+      "train_loss": 0.028759692423045637,
+      "upload_bytes": 4003920,
+      "download_bytes": 4003920,
+      "prototype_upload_bytes": 0,
+      "cum_bytes": 192188160,
+      "val_roc_auc": 0.9988665613963598,
+      "val_acc_05": 0.9750347972872924
+    },
+    {
+      "round": 24,
+      "participants": [
+        7,
+        5,
+        2,
+        3,
+        6,
+        4
+      ],
+      "scheduled": 10,
+      "train_loss": 0.025889729149639606,
+      "upload_bytes": 4003920,
+      "download_bytes": 4003920,
+      "prototype_upload_bytes": 0,
+      "cum_bytes": 200196000,
+      "val_roc_auc": 0.9988358171304381,
+      "val_acc_05": 0.9743536588977404
+    },
+    {
+      "round": 25,
+      "participants": [
+        8,
+        5,
+        2,
+        7,
+        9,
+        1
+      ],
+      "scheduled": 10,
+      "train_loss": 0.03130413467685381,
+      "upload_bytes": 4003920,
+      "download_bytes": 4003920,
+      "prototype_upload_bytes": 0,
+      "cum_bytes": 208203840,
+      "val_roc_auc": 0.9988831499592502,
+      "val_acc_05": 0.9774335890070187
+    },
+    {
+      "round": 26,
+      "participants": [
+        0,
+        2,
+        5,
+        3,
+        9,
+        6,
+        4
+      ],
+      "scheduled": 10,
+      "train_loss": 0.025527340160416707,
+      "upload_bytes": 4003920,
+      "download_bytes": 4003920,
+      "prototype_upload_bytes": 0,
+      "cum_bytes": 216211680,
+      "val_roc_auc": 0.9988595175030077,
+      "val_acc_05": 0.9773743595818403
+    },
+    {
+      "round": 27,
+      "participants": [
+        6,
+        8,
+        3,
+        5,
+        7,
+        4,
+        9,
+        2,
+        1,
+        0
+      ],
+      "scheduled": 10,
+      "train_loss": 0.027841926924884318,
+      "upload_bytes": 4003920,
+      "download_bytes": 4003920,
+      "prototype_upload_bytes": 0,
+      "cum_bytes": 224219520,
+      "val_roc_auc": 0.9988868974851555,
+      "val_acc_05": 0.9775520478573756
+    },
+    {
+      "round": 28,
+      "participants": [
+        5,
+        6,
+        0,
+        9,
+        3,
+        7,
+        4,
+        1
+      ],
+      "scheduled": 10,
+      "train_loss": 0.03002276341430843,
+      "upload_bytes": 4003920,
+      "download_bytes": 4003920,
+      "prototype_upload_bytes": 0,
+      "cum_bytes": 232227360,
+      "val_roc_auc": 0.9989042379788101,
+      "val_acc_05": 0.9774039742944295
+    },
+    {
+      "round": 29,
+      "participants": [
+        4,
+        3,
+        7,
+        9,
+        1,
+        2,
+        0,
+        5
+      ],
+      "scheduled": 10,
+      "train_loss": 0.0320553591591306,
+      "upload_bytes": 4003920,
+      "download_bytes": 4003920,
+      "prototype_upload_bytes": 0,
+      "cum_bytes": 240235200,
+      "val_roc_auc": 0.9989325954709511,
+      "val_acc_05": 0.9778778096958569
+    },
+    {
+      "round": 30,
+      "participants": [
+        3,
+        0,
+        8,
+        6,
+        5,
+        1
+      ],
+      "scheduled": 10,
+      "train_loss": 0.02143202171040078,
+      "upload_bytes": 4003920,
+      "download_bytes": 4003920,
+      "prototype_upload_bytes": 0,
+      "cum_bytes": 248243040,
+      "val_roc_auc": 0.9989112018279195,
+      "val_acc_05": 0.9774335890070187
+    },
+    {
+      "round": 31,
+      "participants": [
+        5,
+        0,
+        6,
+        2,
+        3,
+        8,
+        9,
+        7,
+        1,
+        4
+      ],
+      "scheduled": 10,
+      "train_loss": 0.027024831203743816,
+      "upload_bytes": 4003920,
+      "download_bytes": 4003920,
+      "prototype_upload_bytes": 0,
+      "cum_bytes": 256250880,
+      "val_roc_auc": 0.998924399425622,
+      "val_acc_05": 0.9774335890070187
+    },
+    {
+      "round": 32,
+      "participants": [
+        4,
+        3,
+        5,
+        7,
+        6,
+        0,
+        2,
+        1,
+        8,
+        9
+      ],
+      "scheduled": 10,
+      "train_loss": 0.027340286364778876,
+      "upload_bytes": 4003920,
+      "download_bytes": 4003920,
+      "prototype_upload_bytes": 0,
+      "cum_bytes": 264258720,
+      "val_roc_auc": 0.9989389238172857,
+      "val_acc_05": 0.9774335890070187
+    },
+    {
+      "round": 33,
+      "participants": [
+        1,
+        2,
+        0,
+        9,
+        6,
+        7
+      ],
+      "scheduled": 10,
+      "train_loss": 0.03195863162788252,
+      "upload_bytes": 4003920,
+      "download_bytes": 4003920,
+      "prototype_upload_bytes": 0,
+      "cum_bytes": 272266560,
+      "val_roc_auc": 0.9989637908953313,
+      "val_acc_05": 0.9771078271685373
+    },
+    {
+      "round": 34,
+      "participants": [
+        9,
+        8,
+        4,
+        3,
+        0,
+        2,
+        1,
+        6,
+        7,
+        5
+      ],
+      "scheduled": 10,
+      "train_loss": 0.026411361619830133,
+      "upload_bytes": 4003920,
+      "download_bytes": 4003920,
+      "prototype_upload_bytes": 0,
+      "cum_bytes": 280274400,
+      "val_roc_auc": 0.9989787203593743,
+      "val_acc_05": 0.977048597743359
+    },
+    {
+      "round": 35,
+      "participants": [
+        7,
+        9,
+        8,
+        2,
+        0,
+        6,
+        1,
+        3,
+        5,
+        4
+      ],
+      "scheduled": 10,
+      "train_loss": 0.026232682541012763,
+      "upload_bytes": 4003920,
+      "download_bytes": 4003920,
+      "prototype_upload_bytes": 0,
+      "cum_bytes": 288282240,
+      "val_roc_auc": 0.9989748321496488,
+      "val_acc_05": 0.9771374418811265
+    },
+    {
+      "round": 36,
+      "participants": [
+        8,
+        7,
+        0,
+        9,
+        2,
+        6,
+        5,
+        4,
+        1,
+        3
+      ],
+      "scheduled": 10,
+      "train_loss": 0.025782942632213236,
+      "upload_bytes": 4003920,
+      "download_bytes": 4003920,
+      "prototype_upload_bytes": 0,
+      "cum_bytes": 296290080,
+      "val_roc_auc": 0.9989820434082353,
+      "val_acc_05": 0.9772262860188942
+    },
+    {
+      "round": 37,
+      "participants": [
+        0,
+        3,
+        9,
+        6,
+        8,
+        1,
+        4,
+        5,
+        7,
+        2
+      ],
+      "scheduled": 10,
+      "train_loss": 0.026141059724614023,
+      "upload_bytes": 4003920,
+      "download_bytes": 4003920,
+      "prototype_upload_bytes": 0,
+      "cum_bytes": 304297920,
+      "val_roc_auc": 0.9990004002212133,
+      "val_acc_05": 0.9774632037196079
+    },
+    {
+      "round": 38,
+      "participants": [
+        1,
+        3,
+        7,
+        2,
+        8,
+        6
+      ],
+      "scheduled": 10,
+      "train_loss": 0.02208708591448764,
+      "upload_bytes": 4003920,
+      "download_bytes": 4003920,
+      "prototype_upload_bytes": 0,
+      "cum_bytes": 312305760,
+      "val_roc_auc": 0.9989544160166105,
+      "val_acc_05": 0.9767524506174667
+    },
+    {
+      "round": 39,
+      "participants": [
+        1,
+        2,
+        0,
+        9,
+        3,
+        6,
+        4,
+        5,
+        7,
+        8
+      ],
+      "scheduled": 10,
+      "train_loss": 0.02599287829361856,
+      "upload_bytes": 4003920,
+      "download_bytes": 4003920,
+      "prototype_upload_bytes": 0,
+      "cum_bytes": 320313600,
+      "val_roc_auc": 0.998986506481158,
+      "val_acc_05": 0.976782065330056
+    },
+    {
+      "round": 40,
+      "participants": [
+        8,
+        3,
+        0,
+        9,
+        5,
+        1,
+        6,
+        4,
+        7,
+        2
+      ],
+      "scheduled": 10,
+      "train_loss": 0.026144307292997836,
+      "upload_bytes": 4003920,
+      "download_bytes": 4003920,
+      "prototype_upload_bytes": 0,
+      "cum_bytes": 328321440,
+      "val_roc_auc": 0.9989997719951876,
+      "val_acc_05": 0.9769597536055913
+    },
+    {
+      "round": 41,
+      "participants": [
+        5,
+        2,
+        8,
+        1,
+        9,
+        7
+      ],
+      "scheduled": 10,
+      "train_loss": 0.028683992568403482,
+      "upload_bytes": 4003920,
+      "download_bytes": 4003920,
+      "prototype_upload_bytes": 0,
+      "cum_bytes": 336329280,
+      "val_roc_auc": 0.9990278384173555,
+      "val_acc_05": 0.9777593508455
+    },
+    {
+      "round": 42,
+      "participants": [
+        6,
+        5,
+        3,
+        1,
+        2,
+        9,
+        8,
+        7,
+        0,
+        4
+      ],
+      "scheduled": 10,
+      "train_loss": 0.025122710270807147,
+      "upload_bytes": 4003920,
+      "download_bytes": 4003920,
+      "prototype_upload_bytes": 0,
+      "cum_bytes": 344337120,
+      "val_roc_auc": 0.9990192639810611,
+      "val_acc_05": 0.9776705067077324
+    },
+    {
+      "round": 43,
+      "participants": [
+        7,
+        0,
+        4,
+        6,
+        8,
+        5,
+        1,
+        3
+      ],
+      "scheduled": 10,
+      "train_loss": 0.023867745883762836,
+      "upload_bytes": 4003920,
+      "download_bytes": 4003920,
+      "prototype_upload_bytes": 0,
+      "cum_bytes": 352344960,
+      "val_roc_auc": 0.9990290730391587,
+      "val_acc_05": 0.9776408919951431
+    },
+    {
+      "round": 44,
+      "participants": [
+        4,
+        1,
+        3,
+        2,
+        6,
+        9,
+        7,
+        5,
+        8,
+        0
+      ],
+      "scheduled": 10,
+      "train_loss": 0.025083614978939295,
+      "upload_bytes": 4003920,
+      "download_bytes": 4003920,
+      "prototype_upload_bytes": 0,
+      "cum_bytes": 360352800,
+      "val_roc_auc": 0.999035049675942,
+      "val_acc_05": 0.9776112772825539
+    },
+    {
+      "round": 45,
+      "participants": [
+        7,
+        0,
+        8,
+        5,
+        4,
+        6,
+        9,
+        1,
+        3,
+        2
+      ],
+      "scheduled": 10,
+      "train_loss": 0.024399411259219052,
+      "upload_bytes": 4003920,
+      "download_bytes": 4003920,
+      "prototype_upload_bytes": 0,
+      "cum_bytes": 368360640,
+      "val_roc_auc": 0.9991030120891062,
+      "val_acc_05": 0.9775224331447864
+    },
+    {
+      "round": 46,
+      "participants": [
+        8,
+        2,
+        9,
+        4,
+        0,
+        7,
+        1,
+        5,
+        3,
+        6
+      ],
+      "scheduled": 10,
+      "train_loss": 0.024368946067988874,
+      "upload_bytes": 4003920,
+      "download_bytes": 4003920,
+      "prototype_upload_bytes": 0,
+      "cum_bytes": 376368480,
+      "val_roc_auc": 0.9991070458338184,
+      "val_acc_05": 0.9775224331447864
+    },
+    {
+      "round": 47,
+      "participants": [
+        6,
+        5,
+        8,
+        3,
+        9,
+        0,
+        7,
+        2,
+        4,
+        1
+      ],
+      "scheduled": 10,
+      "train_loss": 0.02361082718707621,
+      "upload_bytes": 4003920,
+      "download_bytes": 4003920,
+      "prototype_upload_bytes": 0,
+      "cum_bytes": 384376320,
+      "val_roc_auc": 0.9991184096906895,
+      "val_acc_05": 0.9774928184321972
+    },
+    {
+      "round": 48,
+      "participants": [
+        0,
+        9,
+        2,
+        4,
+        5,
+        7,
+        3
+      ],
+      "scheduled": 10,
+      "train_loss": 0.026557934204382554,
+      "upload_bytes": 4003920,
+      "download_bytes": 4003920,
+      "prototype_upload_bytes": 0,
+      "cum_bytes": 392384160,
+      "val_roc_auc": 0.9991451905538091,
+      "val_acc_05": 0.9777889655580893
+    },
+    {
+      "round": 49,
+      "participants": [
+        0,
+        9,
+        5,
+        6,
+        3,
+        8,
+        2
+      ],
+      "scheduled": 10,
+      "train_loss": 0.01807768689468503,
+      "upload_bytes": 4003920,
+      "download_bytes": 4003920,
+      "prototype_upload_bytes": 0,
+      "cum_bytes": 400392000,
+      "val_roc_auc": 0.9991285462025071,
+      "val_acc_05": 0.9774928184321972
+    }
+  ],
+  "data": {
+    "encoded_dim": 194,
+    "predictors": [
+      "dst_port",
+      "proto",
+      "service",
+      "duration",
+      "src_bytes",
+      "dst_bytes",
+      "conn_state",
+      "missed_bytes",
+      "src_pkts",
+      "src_ip_bytes",
+      "dst_pkts",
+      "dst_ip_bytes",
+      "dns_query",
+      "dns_qclass",
+      "dns_qtype",
+      "dns_rcode",
+      "dns_AA",
+      "dns_RD",
+      "dns_RA",
+      "dns_rejected",
+      "ssl_version",
+      "ssl_cipher",
+      "ssl_resumed",
+      "ssl_established",
+      "ssl_subject",
+      "ssl_issuer",
+      "http_trans_depth",
+      "http_method",
+      "http_uri",
+      "http_version",
+      "http_request_body_len",
+      "http_response_body_len",
+      "http_status_code",
+      "http_user_agent",
+      "http_orig_mime_types",
+      "http_resp_mime_types",
+      "weird_name",
+      "weird_addl",
+      "weird_notice"
+    ],
+    "n_train": 135067,
+    "n_val": 33767,
+    "n_test": 42209,
+    "client_sizes": [
+      10952,
+      9542,
+      6262,
+      8518,
+      23748,
+      725,
+      48575,
+      6688,
+      6220,
+      13837
+    ],
+    "client_attack_share": [
+      0.30368882417678833,
+      0.5029343962669373,
+      0.9338869452476501,
+      0.9970650672912598,
+      0.6568974256515503,
+      0.8744827508926392,
+      0.9914770722389221,
+      0.6565490365028381,
+      0.010128617286682129,
+      0.8493170738220215
+    ]
+  },
+  "environment": {
+    "python": "3.13.16",
+    "platform": "Linux-6.18.44-fc-v114-x86_64-with-glibc2.39",
+    "torch": "2.14.1+cu130",
+    "cuda_available": false,
+    "cuda": "13.0",
+    "hostname": "vm",
+    "pid": 899
+  },
+  "torch_threads": 1
+}

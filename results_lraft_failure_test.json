@@ -1,0 +1,39 @@
+{
+  "validators": 5,
+  "quorum": 3,
+  "tolerated_crashes": 2,
+  "log": [
+    {
+      "state": "all alive",
+      "alive": 5,
+      "leader": "validator-0",
+      "term": 1,
+      "commit_ms": 0.08477919996039418
+    },
+    {
+      "state": "1 crashed",
+      "alive": 4,
+      "leader": "validator-3",
+      "term": 2,
+      "commit_ok": true,
+      "commit_ms": 0.08614330002956194
+    },
+    {
+      "state": "2 crashed",
+      "alive": 3,
+      "leader": "validator-1",
+      "term": 3,
+      "commit_ok": true,
+      "commit_ms": 0.08113682497423724
+    },
+    {
+      "state": "3 crashed",
+      "alive": 2,
+      "leader": null,
+      "term": 3,
+      "commit_ok": false,
+      "commit_ms": null
+    }
+  ],
+  "ledger_valid_after_test": true
+}
